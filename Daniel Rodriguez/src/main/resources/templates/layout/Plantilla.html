@@ -7,6 +7,14 @@
     <body>
         <header th:replace="~{layout/plantilla :: header}"/>
         
-        <footer th:replace="~{layout/plantilla :: footer}"/>          
+        <footer th:fragment="footer" class="bg-info text-white mt-5 p-2">
+            <div class="container">
+                <div class="col">
+                    <p class="lead text-center">
+                        &copy; [[#(plantilla.derechos)]]
+                    </p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
