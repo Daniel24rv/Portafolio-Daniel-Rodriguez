@@ -1,5 +1,6 @@
 package com.tienda.service;
 
+<<<<<<< HEAD
 import com.tienda.domain.Categoria;
 import java.util.List;
 
@@ -16,4 +17,14 @@ public interface CategoriaService {
     
     // Se elimina el categoria que tiene el id pasado por parámetro
     public void delete(Categoria categoria);
+=======
+package tienda.demo.service;
+
+import tienda.demo.domain.categoria;
+import java.util.List;
+
+public interface categoriaService {
+    // Se obtiene un listado de categorias en un List
+    public List<categoria> getCategorias(boolean activos);
+>>>>>>> parent of 44e3fb4 (semana 7.1)
 }
