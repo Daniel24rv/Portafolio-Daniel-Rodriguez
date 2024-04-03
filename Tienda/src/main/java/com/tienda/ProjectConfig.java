@@ -97,14 +97,14 @@ public class ProjectConfig implements WebMvcConfigurer {
      @Bean
     public UserDetailsService users() {
         UserDetails admin = User.builder()
-                .username("juan")
+                .username("Juan")
                 .password("{noop}123")
                 .roles("USER", "VENDEDOR", "ADMIN")
                 .build();
         UserDetails sales = User.builder()
                 .username("rebeca")
                 .password("{noop}456")
-                .roles("USER", "VENDEDOR")
+                .roles("USER", "VENDEDOR","ADMIN")
                 .build();
         UserDetails user = User.builder()
                 .username("pedro")
