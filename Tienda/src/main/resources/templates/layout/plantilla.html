@@ -35,7 +35,8 @@
                                 <ul class="dropdown-menu dropdown-menu-dark" sec:authorize="hasRole('ROLE_ADMIN')">
                                     <li><a class="dropdown-item" th:href="@{/usuario/listado}">[[#{plantilla.usuarios}]]</a></li>
                                     <li><a class="dropdown-item" th:href="@{/pruebas/listado}">[[#{plantilla.asociaciones}]]</a></li>
-                                    <li><a class="dropdown-item" th:href="@{/pruebas/listado2}">[[#{plantilla.consultas}]]</a></li>                                    
+                                    <li><a class="dropdown-item" th:href="@{/pruebas/listado2}">[[#{plantilla.consultas}]]</a></li>
+                                    <li><a class="dropdown-item" th:href="@{/carrito/listado}">[[#{plantilla.carrito}]]</a></li>                                     
                                 </ul>
                             </li>                            
                         </ul>
@@ -48,7 +49,7 @@
                                 </ul>
                             </li>
                         </ul>
-                        
+
                         <ul class="navbar-nav" sec:authorize="!isAuthenticated()">
                             <li class="nav-item">
                                 <a class="nav-link" th:href="@{/login}">
@@ -56,7 +57,7 @@
                                 </a>
                             </li>
                         </ul>
-                        
+
                         <ul class="navbar-nav" sec:authorize="isAuthenticated()">
                             <li class="nav-item text-white my-auto">
                                 <img th:src="@{${session.usuarioImagen}}"
@@ -70,11 +71,11 @@
                                     <button class="btn btn-dark">
                                         <i class="fas fa-sign-out-alt"></i>
                                     </button>
-                                    
+
                                 </form>
                             </li>
                         </ul>
-                        
+
                     </div>
                 </div>
             </nav>

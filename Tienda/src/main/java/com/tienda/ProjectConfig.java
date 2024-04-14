@@ -94,25 +94,25 @@ public class ProjectConfig implements WebMvcConfigurer {
         return http.build();
         
     }
-     @Bean
-    public UserDetailsService users() {
-        UserDetails admin = User.builder()
-                .username("Juan")
-                .password("{noop}123")
-                .roles("USER", "VENDEDOR", "ADMIN")
-                .build();
-        UserDetails sales = User.builder()
-                .username("rebeca")
-                .password("{noop}456")
-                .roles("USER", "VENDEDOR","ADMIN")
-                .build();
-        UserDetails user = User.builder()
-                .username("pedro")
-                .password("{noop}789")
-                .roles("USER")
-                .build();
-        return new InMemoryUserDetailsManager(user, sales, admin);
-    }
+//     @Bean
+//    public UserDetailsService users() {
+//        UserDetails admin = User.builder()
+//                .username("Juan")
+//                .password("{noop}123")
+//                .roles("USER", "VENDEDOR", "ADMIN")
+//                .build();
+//        UserDetails sales = User.builder()
+//                .username("rebeca")
+//                .password("{noop}456")
+//                .roles("USER", "VENDEDOR","ADMIN")
+//                .build();
+//        UserDetails user = User.builder()
+//                .username("pedro")
+//                .password("{noop}789")
+//                .roles("USER")
+//                .build();
+//        return new InMemoryUserDetailsManager(user, sales, admin);
+//    }
     
     @Autowired
     private UserDetailsService userDetailsService;
